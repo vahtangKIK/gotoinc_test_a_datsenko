@@ -6,17 +6,17 @@
 name and options with validation types and rules. These are possible validation
 types (you can implement your own as well):
 
-  - `presence` - requires an attribute to be neither `nil` nor an empty string.
-  Usage example:
-  `validate :name, presence: true`
+  - `presence` - requires an attribute to be neither `nil` nor an empty string.  
+  Usage example:  
+  `validate :name, presence: true`  
 
-  - `format` - requires an attribute to match the passed regular expression.
-  Usage example:
-  `validate :number, format: /A-Z{0,3}/`
+  - `format` - requires an attribute to match the passed regular expression.  
+  Usage example:  
+  `validate :number, format: /A-Z{0,3}/`  
 
-  - `type` - requires an attribute to be an instance of the passed class.
-  Usage example:
-  `validate :owner, type: User`
+  - `type` - requires an attribute to be an instance of the passed class.  
+  Usage example:  
+  `validate :owner, type: User`  
 
 2. Contains an instance method `validate!` which runs all checks and validations,
 that added to a class via the class method `validate`. In case of any mismatch it raises
@@ -28,11 +28,11 @@ and false if there is any validation fail.
 ### Usage
 
 #### Without Docker
-`$ bundle install`
-`$ rake` or `$ rspec`
+`$ bundle install`  
+`$ rake` or `$ rspec`  
 
 #### With Docker
 
-`$ docker build -t a-datsenko-test .`
-`$ docker run a-datsenko-test`
-`$ docker rmi -f a-datsenko-test`
+`$ docker build -t a-datsenko-test .`  
+`$ docker run a-datsenko-test`  
+`$ docker rmi -f a-datsenko-test`  
